@@ -961,8 +961,11 @@
 		document.getElementById('labelUses').style.color = "grey";
 	}
 	
-	var currentTab = document.querySelector("#homeNav");
-	currentTab.classList.replace("nav-link", "nav-link active");
+	function setPage() {
+		var currentTab = document.querySelector("#homeNav");
+		currentTab.classList.replace("nav-link", "nav-link active");
+	}
+	setPage();
 	</script>
   </body>
 </html>
