@@ -961,7 +961,7 @@
 		document.getElementById('labelUses').style.color = "grey";
 	}
 	
-	function setPage() {
+	window.onload = function setPage() {
 		var element = document.querySelector("#homeNav");
 		element.classList.replace("nav-link", "nav-link active");
 	}
