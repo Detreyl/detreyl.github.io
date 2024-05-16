@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>DM Screen</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+	<style>
+		table, th, td {
+		  border:1px solid black;
+		}
+		tr:nth-child(odd) {
+		  background-color: #dddddd;
+		}
+	</style>
+  </head>
+  <body>
+
+ <div htmlInclude="navbar.html"></div> 
+
+
+<!-- The Page's Main Contents -->
+    <div class="container my-5">
+      <h1>Remember: It's just a game.</h1>
+      <div class="col-lg-8 px-0">
+        <p class="fs-5">Wouldn't it be cool if...?</p>
+        <p>Have fun with it and relax. Don't forget your music.</p>
+        <p>Keep in mind: You are the DM. You can change anything here if you don't like it.</p>
+
+        <hr class="col-1 my-4">
+
+        <!-- <a href="https://getbootstrap.com" class="btn btn-primary">Read the Bootstrap docs</a> -->
+        <!-- <a href="https://github.com/twbs/examples" class="btn btn-secondary">View on GitHub</a> -->
+	  </div>
+
+  </body>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="main.js"></script>
+  <script>
+	function setPage() {
+	var currentTab = document.querySelector("#blankNav");
+	currentTab.classList.add("active");
+	}
+	
+	window.onload = setPage();
+  </script>
+</html>
