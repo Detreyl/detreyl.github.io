@@ -1,0 +1,783 @@
+{
+  "name": "random-encounter-table",
+  "description": "A series of lists for groups, behaviors and complications.",
+  "version": "0.0.1",
+  "private": true,
+  
+  "groups": {
+	"aberrations": {
+		"name": "Aberrations",
+		"social": "A single, A small group of, A large group of, A small band of, A medium-sized group of, A fairly large group of",
+		"subgroup": "mindflayer, mind devourer, beholder",
+		"rarity": {
+			"forest": "mythic",
+			"cave": "common",
+			"enchantedForest": "uncommon",
+			"smallCity": "common",
+			"largeCity": "common",
+			"ocean": "rare",
+			"underdark": "common",
+			"swamps": "rare",
+			"hills": "common",
+			"mountains": "common",
+			"arctic": "legendary",
+			"deserts": "rare",
+			"coast": "rare",
+			"grasslands": "common"
+		}
+	},
+	"adventurers": {
+		"name": "Adventurers",
+		"social": "A single, A small group of, A large group of, A small band of, A medium-sized group of, A fairly large group of",
+		"subgroup": "seasoned adventurer, newer adventurer, veteran adventurer, retired adventurer",
+		"rarity": {
+			"forest": "uncommon",
+			"cave": "common",
+			"enchantedForest": "uncommon",
+			"smallCity": "common",
+			"largeCity": "common",
+			"ocean": "rare",
+			"underdark": "common",
+			"swamps": "rare",
+			"hills": "common",
+			"mountains": "common",
+			"arctic": "legendary",
+			"deserts": "rare",
+			"coast": "rare",
+			"grasslands": "common"
+		}
+	},
+	"amphibious": {
+		"name": "Amphibious Creatures",
+		"social": "A, A single, A lone, A solitary, A couple",
+		"subgroup": "giant toad, alligator, crocodile, giant crocodile",
+		"rarity": {
+			"forest": "common",
+			"cave": "common",
+			"enchantedForest": "uncommon",
+			"smallCity": "uncommon",
+			"largeCity": "common",
+			"ocean": "rare",
+			"underdark": "common",
+			"swamps": "rare",
+			"hills": "common",
+			"mountains": "common",
+			"arctic": "legendary",
+			"deserts": "rare",
+			"coast": "rare",
+			"grasslands": "common"
+		}
+	},
+	"arcanists": {
+		"name": "Arcanists",
+		"social": "A, A single, A lone, A solitary, A couple",
+		"subgroup": "enchanter, scribe, alchemist, wandcooper, magical artisian, runemaster, witch, hermit",
+		"rarity": {
+			"forest": "very rare",
+			"cave": "common",
+			"enchantedForest": "uncommon",
+			"smallCity": "uncommon",
+			"largeCity": "common",
+			"ocean": "rare",
+			"underdark": "common",
+			"swamps": "rare",
+			"hills": "common",
+			"mountains": "common",
+			"arctic": "legendary",
+			"deserts": "rare",
+			"coast": "rare",
+			"grasslands": "common"
+		}
+	},
+	"birds": {
+		"name": "Birds",
+		"social": "A, A single, A lone, A solitary, A group",
+		"subgroup": "blood hawk, giant eagle, giant raven, giant owl",
+		"rarity": {
+			"forest": "common",
+			"cave": "common",
+			"enchantedForest": "uncommon",
+			"smallCity": "uncommon",
+			"largeCity": "common",
+			"ocean": "rare",
+			"underdark": "common",
+			"swamps": "rare",
+			"hills": "common",
+			"mountains": "common",
+			"arctic": "legendary",
+			"deserts": "rare",
+			"coast": "rare",
+			"grasslands": "common"
+		}
+	},
+	"cats": {
+		"name": "Cats",
+		"social": "A, A lone, A single, A solitary, A couple",
+		"subgroup": "tiger, lion, sabertooth tiger, panther, leopard, cougar",
+		"rarity": {
+			"forest": "common",
+			"cave": "common",
+			"enchantedForest": "uncommon",
+			"smallCity": "uncommon",
+			"largeCity": "common",
+			"ocean": "rare",
+			"underdark": "common",
+			"swamps": "rare",
+			"hills": "common",
+			"mountains": "common",
+			"arctic": "legendary",
+			"deserts": "rare",
+			"coast": "rare",
+			"grasslands": "common"
+		}
+	},
+	"criminals": {
+		"name": "Criminals",
+		"social": "A, A lone, A single, A solitary, A couple, A small group of, A group of, A large group of, A band of, A lot of",
+		"subgroup": "bandit, pirate, slaver",
+		"rarity": {
+			"forest": "common",
+			"cave": "common",
+			"enchantedForest": "uncommon",
+			"smallCity": "uncommon",
+			"largeCity": "common",
+			"ocean": "rare",
+			"underdark": "common",
+			"swamps": "rare",
+			"hills": "common",
+			"mountains": "common",
+			"arctic": "legendary",
+			"deserts": "rare",
+			"coast": "rare",
+			"grasslands": "common"
+		}
+	},
+	"dinosaurs-small": {
+		"name": "Small Dinosaurs",
+		"social": "A lone, A single, A couple, A small group of, A group of, A large group of, A band of, A lot of",
+		"subgroup": "deinonychus, clawfoot, raptor",
+		"rarity": {
+			"forest": "common",
+			"cave": "common",
+			"enchantedForest": "uncommon",
+			"smallCity": "uncommon",
+			"largeCity": "common",
+			"ocean": "rare",
+			"underdark": "common",
+			"swamps": "rare",
+			"hills": "common",
+			"mountains": "common",
+			"arctic": "legendary",
+			"deserts": "rare",
+			"coast": "rare",
+			"grasslands": "common"
+		}
+	},
+	"dinosaurs-medium": {
+		"name": "Medium Dinosaurs",
+		"social": "A si10ngle, A solitary, A couple, A small group of, A group of, A large group of",
+		"subgroup": "stegosaurus, allosaurus, triceratops, anky",
+		"rarity": {
+			"forest": "common",
+			"cave": "common",
+			"enchantedForest": "uncommon",
+			"smallCity": "uncommon",
+			"largeCity": "common",
+			"ocean": "rare",
+			"underdark": "common",
+			"swamps": "rare",
+			"hills": "common",
+			"mountains": "common",
+			"arctic": "legendary",
+			"deserts": "rare",
+			"coast": "rare",
+			"grasslands": "common"
+		}
+	},
+	"dinosaurs-large": {
+		"name": "Large Dinosaurs",
+		"social": "A, A solitary, A single, A lone, A small group of",
+		"subgroup": "brontosaurus, rex",
+		"rarity": {
+			"forest": "common",
+			"cave": "common",
+			"enchantedForest": "uncommon",
+			"smallCity": "uncommon",
+			"largeCity": "common",
+			"ocean": "rare",
+			"underdark": "common",
+			"swamps": "rare",
+			"hills": "common",
+			"mountains": "common",
+			"arctic": "legendary",
+			"deserts": "rare",
+			"coast": "rare",
+			"grasslands": "common"
+		}
+	},
+	"dwarves": {
+		"name": "Dwarves",
+		"social": "A lone, A single, A small group of",
+		"subgroup": "dwarven miner, dwarven crafter, dwarven warrior, dwarven adventurer",
+		"rarity": {
+			"forest": "mythic",
+			"cave": "common",
+			"enchantedForest": "uncommon",
+			"smallCity": "uncommon",
+			"largeCity": "common",
+			"ocean": "rare",
+			"underdark": "common",
+			"swamps": "rare",
+			"hills": "common",
+			"mountains": "common",
+			"arctic": "legendary",
+			"deserts": "rare",
+			"coast": "rare",
+			"grasslands": "common"
+		}
+	},
+	"elves": {
+		"name": "Elves",
+		"social": "A lone, A, A single, A small group of, A group of",
+		"subgroup": "elven ranger, elven wizard, elven sorcerer, elven warrior, elven archer, elven druid, elven herbalist",
+		"rarity": {
+			"forest": "uncommon",
+			"cave": "common",
+			"enchantedForest": "uncommon",
+			"smallCity": "uncommon",
+			"largeCity": "common",
+			"ocean": "rare",
+			"underdark": "common",
+			"swamps": "rare",
+			"hills": "common",
+			"mountains": "common",
+			"arctic": "legendary",
+			"deserts": "rare",
+			"coast": "rare",
+			"grasslands": "common"
+		}
+	},
+	"fey": {
+		"name": "Fey",
+		"social": "A small group of",
+		"subgroup": "dryad, nymph, sylph, satyr, faun, hag, sidhe, spriggan, quickling, redcap, sprite, pixie, brownie, blink dog, winterling, verdant prince, thorn, boggart, korred, hybsil",
+		"rarity": {
+			"forest": "uncommon",
+			"cave": "common",
+			"enchantedForest": "uncommon",
+			"smallCity": "rare",
+			"largeCity": "rare",
+			"ocean": "rare",
+			"underdark": "common",
+			"swamps": "rare",
+			"hills": "common",
+			"mountains": "common",
+			"arctic": "legendary",
+			"deserts": "rare",
+			"coast": "rare",
+			"grasslands": "common"
+		}
+	},
+	"giants": {
+		"name": "Giants",
+		"social": "An isolated, A, A lone, A single, A solitary, A couple, A few",
+		"subgroup": "troll, giant, hill giant, mountain giant, storm giant, goliath",
+		"rarity": {
+			"forest": "very rare",
+			"cave": "common",
+			"enchantedForest": "uncommon",
+			"smallCity": "mythic",
+			"largeCity": "mythic",
+			"ocean": "rare",
+			"underdark": "common",
+			"swamps": "rare",
+			"hills": "common",
+			"mountains": "common",
+			"arctic": "legendary",
+			"deserts": "rare",
+			"coast": "rare",
+			"grasslands": "common"
+		}
+	},
+	"gnomes": {
+		"name": "Gnomes",
+		"social": "group",
+		"rarity": {
+			"forest": "uncommon",
+			"cave": "common",
+			"enchantedForest": "uncommon",
+			"smallCity": "uncommon",
+			"largeCity": "common",
+			"ocean": "rare",
+			"underdark": "common",
+			"swamps": "rare",
+			"hills": "common",
+			"mountains": "common",
+			"arctic": "legendary",
+			"deserts": "rare",
+			"coast": "rare",
+			"grasslands": "common"
+		}
+	},
+    "goblins": {
+		"name": "Goblins",
+		"social": "group",
+		"rarity": {
+			"forest": "common",
+			"cave": "common",
+			"enchantedForest": "uncommon",
+			"smallCity": "uncommon",
+			"largeCity": "common",
+			"ocean": "rare",
+			"underdark": "common",
+			"swamps": "rare",
+			"hills": "common",
+			"mountains": "common",
+			"arctic": "legendary",
+			"deserts": "rare",
+			"coast": "rare",
+			"grasslands": "common"
+		}
+	},
+	"herdanimals": {
+		"name": "Herd Animals",
+		"social": "group",
+	    "subgroup": "mammoths, elephants, rhinosauruses",
+		"rarity": {
+			"forest": "common",
+			"cave": "common",
+			"enchantedForest": "uncommon",
+			"smallCity": "uncommon",
+			"largeCity": "common",
+			"ocean": "rare",
+			"underdark": "common",
+			"swamps": "rare",
+			"hills": "common",
+			"mountains": "common",
+			"arctic": "legendary",
+			"deserts": "rare",
+			"coast": "rare",
+			"grasslands": "common"
+		}
+	},
+	"insects": {
+		"name": "Insects",
+		"social": "group",
+		"subgroup": "giant wasp, giant spider, giant flying spider, stirge",
+		"rarity": {
+			"forest": "common",
+			"cave": "common",
+			"enchantedForest": "uncommon",
+			"smallCity": "uncommon",
+			"largeCity": "common",
+			"ocean": "rare",
+			"underdark": "common",
+			"swamps": "rare",
+			"hills": "common",
+			"mountains": "common",
+			"arctic": "legendary",
+			"deserts": "rare",
+			"coast": "rare",
+			"grasslands": "common"
+		}
+	},
+	"law": {
+		"name": "the Law",
+		"social": "A large group of, A lone, A single, A, A small group",
+		"subgroup": "local guard, army, bounty hunter, court wizard, slave, guarded prisoner, escaped prisoner, scout",
+		"rarity": {
+			"forest": "uncommon",
+			"cave": "common",
+			"enchantedForest": "uncommon",
+			"smallCity": "uncommon",
+			"largeCity": "common",
+			"ocean": "rare",
+			"underdark": "common",
+			"swamps": "rare",
+			"hills": "common",
+			"mountains": "common",
+			"arctic": "legendary",
+			"deserts": "rare",
+			"coast": "rare",
+			"grasslands": "common"
+		}
+	},
+	"mammels": {
+		"name": "Mammels",
+		"social": "group",
+		"subgroup": "brown bear, black bear, giant hyena, ape, giant ape, giant rats",
+		"rarity": {
+			"forest": "common",
+			"cave": "common",
+			"enchantedForest": "uncommon",
+			"smallCity": "uncommon",
+			"largeCity": "common",
+			"ocean": "rare",
+			"underdark": "common",
+			"swamps": "rare",
+			"hills": "common",
+			"mountains": "common",
+			"arctic": "legendary",
+			"deserts": "rare",
+			"coast": "rare",
+			"grasslands": "common"
+		}
+	},
+	"mercenaries": {
+		"name": "Mercenaries",
+		"social": "group",
+		"rarity": {
+			"forest": "uncommon",
+			"cave": "common",
+			"enchantedForest": "uncommon",
+			"smallCity": "common",
+			"largeCity": "common",
+			"ocean": "rare",
+			"underdark": "common",
+			"swamps": "rare",
+			"hills": "common",
+			"mountains": "common",
+			"arctic": "legendary",
+			"deserts": "rare",
+			"coast": "rare",
+			"grasslands": "common"
+		}
+	},
+	"monstersSmall": {
+		"name": "Small Monsters",
+		"social": "A, A single, A lone, A small group of, A group of, A large group of, A couple of",
+		"subgroup": "owlbear, displacer beast, winter wolf, phase spider, girallon, harpy, shadow mastiff, yuan-ti, lamia, cockatrice, griffin, mimic, worg, gnoll",
+		"rarity": {
+			"forest": "uncommon",
+			"cave": "common",
+			"enchantedForest": "uncommon",
+			"smallCity": "uncommon",
+			"largeCity": "common",
+			"ocean": "rare",
+			"underdark": "common",
+			"swamps": "rare",
+			"hills": "common",
+			"mountains": "common",
+			"arctic": "legendary",
+			"deserts": "rare",
+			"coast": "rare",
+			"grasslands": "common"
+		}
+	},
+	"monstersLarge": {
+		"name": "Large Monsters",
+		"social": "A, A single, A lone, A couple of",
+		"subgroup": "ank'heg, ank'rag, chimera, roc, ettercap, behir, bulette",
+		"rarity": {
+			"forest": "uncommon",
+			"cave": "common",
+			"enchantedForest": "uncommon",
+			"smallCity": "uncommon",
+			"largeCity": "common",
+			"ocean": "rare",
+			"underdark": "common",
+			"swamps": "rare",
+			"hills": "common",
+			"mountains": "common",
+			"arctic": "legendary",
+			"deserts": "rare",
+			"coast": "rare",
+			"grasslands": "common"
+		}
+	},
+	"mythical beasts": {
+		"name": "Mythical Beasts",
+		"social": "A, A single, A solitary, A lone, A couple",
+		"subgroup": "dragon, wyvern, hydra, unicorn, pegasi, basilisk, hippogriff, kitsune, okami, manticore, purple worm, pseudodragon, imp, fiend",
+		"rarity": {
+			"forest": "legendary",
+			"cave": "common",
+			"enchantedForest": "uncommon",
+			"smallCity": "uncommon",
+			"largeCity": "common",
+			"ocean": "rare",
+			"underdark": "common",
+			"swamps": "rare",
+			"hills": "common",
+			"mountains": "common",
+			"arctic": "legendary",
+			"deserts": "rare",
+			"coast": "rare",
+			"grasslands": "common"
+		}
+	},
+	"peasant": {
+		"name": "Peasants",
+		"social": "A, A single, A lone, A couple, A few",
+		"subgroup": "farmer, carpenter, baker, chef, child, teenager, bum, begger, noble",
+		"rarity": {
+			"forest": "rare",
+			"cave": "common",
+			"enchantedForest": "uncommon",
+			"smallCity": "uncommon",
+			"largeCity": "common",
+			"ocean": "rare",
+			"underdark": "common",
+			"swamps": "rare",
+			"hills": "common",
+			"mountains": "common",
+			"arctic": "legendary",
+			"deserts": "rare",
+			"coast": "rare",
+			"grasslands": "common"
+		}
+	},
+	"plants": {
+		"name": "Plants",
+		"social": "group",
+		"rarity": {
+			"forest": "uncommon",
+			"cave": "common",
+			"enchantedForest": "uncommon",
+			"smallCity": "mythic",
+			"largeCity": "legendary",
+			"ocean": "rare",
+			"underdark": "common",
+			"swamps": "rare",
+			"hills": "common",
+			"mountains": "common",
+			"arctic": "legendary",
+			"deserts": "rare",
+			"coast": "rare",
+			"grasslands": "common"
+		}
+	},
+	"snakes": {
+		"name": "Snakes",
+		"social": "A, A lone, A single, A solitary, A couple",
+		"subgroup": "giant constrictor snake, giant coral snake",
+		"rarity": {
+			"forest": "common",
+			"cave": "common",
+			"enchantedForest": "uncommon",
+			"smallCity": "uncommon",
+			"largeCity": "common",
+			"ocean": "rare",
+			"underdark": "common",
+			"swamps": "rare",
+			"hills": "common",
+			"mountains": "common",
+			"arctic": "legendary",
+			"deserts": "rare",
+			"coast": "rare",
+			"grasslands": "common"
+		}
+	},
+	"caravan": {
+		"name": "Merchant Caravans",
+		"social": "A small caravan of, A medium-sized caravan of, A large caravan of, A heavily armed, A poorly equipped, A well equipped, An armed caravan of, A single",
+		"subgroup": "merchant, distant merchant",
+		"rarity": {
+			"forest": "uncommon",
+			"cave": "common",
+			"enchantedForest": "uncommon",
+			"smallCity": "common",
+			"largeCity": "common",
+			"ocean": "rare",
+			"underdark": "common",
+			"swamps": "rare",
+			"hills": "common",
+			"mountains": "common",
+			"arctic": "legendary",
+			"deserts": "rare",
+			"coast": "rare",
+			"grasslands": "common"
+		}
+	},
+	"merchant": {
+		"name": "Merchants",
+		"social": "A single, A lone, A heavily armed, A poorly equipped, A well equipped",
+		"skill": "novice, journeymen, expert, master",
+		"escort": "none, small, medium, large",
+		"subgroup": "traveling merchant, weapon merchant, armor merchant, potion seller",
+		"rarity": {
+			"forest": "uncommon",
+			"cave": "common",
+			"enchantedForest": "uncommon",
+			"smallCity": "common",
+			"largeCity": "common",
+			"ocean": "rare",
+			"underdark": "common",
+			"swamps": "rare",
+			"hills": "common",
+			"mountains": "common",
+			"arctic": "legendary",
+			"deserts": "rare",
+			"coast": "rare",
+			"grasslands": "common"
+		}
+	},
+	"undead": {
+		"name": "Undead",
+		"social": "A horde of, A small horde of, A small group of, A huge horde of, A large group of, Several",
+		"subgroup": "ghost, ghoul, wight, will-o-wisp, zombie, banshee, skeleton, barghest, revenant, gnoll witherling",
+		"rarity": {
+			"forest": "rare",
+			"cave": "common",
+			"enchantedForest": "uncommon",
+			"smallCity": "uncommon",
+			"largeCity": "common",
+			"ocean": "rare",
+			"underdark": "common",
+			"swamps": "rare",
+			"hills": "common",
+			"mountains": "common",
+			"arctic": "legendary",
+			"deserts": "rare",
+			"coast": "rare",
+			"grasslands": "common"
+		}
+	},
+	"wardens": {
+		"name": "Wardens",
+		"social": "A, A single, A lone, A couple, A few",
+		"skill": "novice, tradesmen, expert, master",
+		"subgroup": "green knight, druid",
+		"rarity": {
+			"forest": "rare",
+			"cave": "common",
+			"enchantedForest": "uncommon",
+			"smallCity": "uncommon",
+			"largeCity": "common",
+			"ocean": "rare",
+			"underdark": "common",
+			"swamps": "rare",
+			"hills": "common",
+			"mountains": "common",
+			"arctic": "legendary",
+			"deserts": "rare",
+			"coast": "rare",
+			"grasslands": "common"
+		}
+	},
+	"wolves": {
+		"name": "Wolves",
+		"social": "group",
+		"subgroup": "A lone wolf, A small pack of wolves, A large pack of wolves, A single dire wolf, A small group of dire wolves, A large group of wolves lead by a dire wolf",
+		"rarity": {
+			"forest": "common",
+			"cave": "common",
+			"enchantedForest": "uncommon",
+			"smallCity": "uncommon",
+			"largeCity": "common",
+			"ocean": "rare",
+			"underdark": "common",
+			"swamps": "rare",
+			"hills": "common",
+			"mountains": "common",
+			"arctic": "legendary",
+			"deserts": "rare",
+			"coast": "rare",
+			"grasslands": "common"
+		}
+	},
+	"woodsmen": {
+		"name": "Woodsmen",
+		"social": "A, A single, A lone, A couple, A few",
+		"skill": "novice, journeymen, expert, master",
+		"subgroup": "woodsmen, lumberjack, hunter, herbalist, ranger",
+		"rarity": {
+			"forest": "rare",
+			"cave": "common",
+			"enchantedForest": "uncommon",
+			"smallCity": "uncommon",
+			"largeCity": "common",
+			"ocean": "rare",
+			"underdark": "common",
+			"swamps": "rare",
+			"hills": "common",
+			"mountains": "common",
+			"arctic": "legendary",
+			"deserts": "rare",
+			"coast": "rare",
+			"grasslands": "common"
+		}
+	},
+	"small elementals": {
+		"name": "Small Elementals",
+		"social": "An isolated, A single, A couple, A few, Several, Many, A lot of, Dozens of, Hundreds of",
+		"subgroup": "mephit, spirit, sprite, beast, dragonkin",
+		"elements": "earth/dust, fire/lava, water/ice, air/lightning, arcane",
+		"rarity": {
+			"forest": "common",
+			"cave": "common",
+			"enchantedForest": "uncommon",
+			"smallCity": "mythic",
+			"largeCity": "rare",
+			"ocean": "rare",
+			"underdark": "common",
+			"swamps": "rare",
+			"hills": "common",
+			"mountains": "common",
+			"arctic": "legendary",
+			"deserts": "rare",
+			"coast": "rare",
+			"grasslands": "common"
+		}
+	},
+	"medium elementals": {
+		"name": "Medium-sized Elementals",
+		"social": "An isolated, A, A lone, A single, A couple, Two, A few, Several, Many",
+		"subgroup": "humanoid, spirit, beast, dragonkin",
+		"elements": "earth/dust, fire/lava, water/ice, air/lightning, arcane",
+		"rarity": {
+			"forest": "common",
+			"cave": "common",
+			"enchantedForest": "uncommon",
+			"smallCity": "mythic",
+			"largeCity": "rare",
+			"ocean": "rare",
+			"underdark": "common",
+			"swamps": "rare",
+			"hills": "common",
+			"mountains": "common",
+			"arctic": "legendary",
+			"deserts": "rare",
+			"coast": "rare",
+			"grasslands": "common"
+		}
+	},
+	"large elementals": {
+		"name": "Large Elementals",
+		"social": "An isolated, A, A lone, A single, A solitary, A couple, A few",
+		"subgroup": "golem, humanoid, spirit, beast, dragonkin",
+		"elements": "earth/dust, fire/lava, water/ice, air/lightning, arcane",
+		"rarity": {
+			"forest": "common",
+			"cave": "common",
+			"enchantedForest": "uncommon",
+			"smallCity": "mythic",
+			"largeCity": "rare",
+			"ocean": "rare",
+			"underdark": "common",
+			"swamps": "rare",
+			"hills": "common",
+			"mountains": "common",
+			"arctic": "legendary",
+			"deserts": "rare",
+			"coast": "rare",
+			"grasslands": "common"
+		}
+	}
+  },
+  "behaviors": "fleeing, traveling, running, foraging, gathering, eating, fighting amongst themselves, fighting, hiding, nesting, yelling at themselves, yelling, sleeping, searching, dancing, singing to themselves, singing, resting, investigating, negotiating, negotiating with, repairing, hunting, scouting, setting traps, tracking, climbing something, making art, writing, felling a tree, sightseeing, drinking, crafting, digging, swimming, bathing, playing games, telling stories, dancing together, worshipping, meditating, teaching, learning, competing, celebrating, mourning, healing, building, negotiating, discussing",
+  "complications": "being chased, starvation, being affected by a magical abnormality, being disorganized, being nervous, being oblivious, arguing amongst themselves, escaped captives, being affected by an enchantment, being depressed about a tragedy, being concerned, being lost, being cursed, being injured, being haunted, being betrayed, panic, insanity, being diseased, being on death's door, being drunk, being involved with, having language issues with",
+  "complicationExtraDetails": {
+	"insanities": "delusion, paranoia, being catatonic, psychosis, being a sociopath, masochism, sadism, addictions, narcissism, hallucinations, hysteria, confusion, disorientation",
+	"magical abnormalities": "way too small, way too big, charmed, asleep, floating, sparkling, followed by lightning clouds, erratic time adjustments, time is slowed, time is fast, things they touch come to life, emotions spread like a disease, magic casts are unpredictable, elemental control, memory loss, merged senses, polymorph into something cute, polymorph into something creepy, polymorph into something silly, when they speak they charm creatures, animal friendship",
+	"enchantments": "charmed, uncontrollable laughter, uncontrollable dancing, random race changes, forced to tell the truth, inconsolingly lonely, shadow runs away, imagination makes illusions"
+  },
+  "elements": {
+	  "key": "earth, fire, water, air, arcane",
+	  "forest": "500, 50, 300, 100, 50",
+	  "cave": "900, 20, 40, 20, 20"
+  },
+  "creatureExclusions": {
+	  "forest": "bandits"
+  }
+}
