@@ -42,7 +42,7 @@
   <script src="main.js"></script>
   <script>
 
-currentNPC = [];
+	currentNPC = [];
 	
 	function createNPC(race) {
 		currentNPC.race = race;
@@ -51,7 +51,6 @@ currentNPC = [];
 		currentNPC.nose = setNose(race);
 		console.log(currentNPC.eyes + " eyes and " + currentNPC.hair + " hair.")
 	}
-	
 	
 	function setEyes(race) {
 		if (race == "human") { choices = ["brown", "blue", "green"]; }
@@ -73,6 +72,5 @@ currentNPC = [];
 	
 	createNPC("dwarf");
 	console.log(currentNPC)
-	<!-- window.onload = setPage(); -->
   </script>
 </html>
