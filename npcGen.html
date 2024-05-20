@@ -40,7 +40,8 @@
 		  <option value="human">Human</option>
 		  <option value="half-elf">Half-elf</option>
 		  <option value="half-orc">Half-orc</option>
-		  <option value="elf">Elf</option>
+		  <option value="forest elf">Forest Elf</option>
+		  <option value="high elf">High Elf</option>
 		  <option value="dwarf">Dwarf</option>
 		  <option value="gnome">Gnome</option>
 		  <option value="halfling">Halfling</option>
@@ -99,7 +100,7 @@
 	
 	function createRandomNPC(race, age, sex) {
 		if (race == "random") {
-		races = [ "human", "human", "human", "dwarf", "elf", "half-elf", "half-orc", "gnome", "halfling","dwarf", "elf", "half-elf", "half-orc", "gnome", "halfling", "tiefling", "goliath", "goblin", "aarakocra", "aasimar", "bugbear", "centaur", "fey", "firbolg", "giant", "githyanki", "kobold", "lizardfolk", "orc", "satyr", "tabaxi", "triton", "warforged", "yuan-ti"]
+		races = [ "human", "human", "human", "dwarf", "forest elf", "high elf", "half-elf", "half-orc", "gnome", "halfling","dwarf", "forest elf", "high elf", "half-elf", "half-orc", "gnome", "halfling", "tiefling", "goliath", "goblin", "aarakocra", "aasimar", "bugbear", "centaur", "fey", "firbolg", "giant", "githyanki", "kobold", "lizardfolk", "orc", "satyr", "tabaxi", "triton", "warforged", "yuan-ti"]
 		}
 		else { races = [ race ] }
 		if (age == "random") {
@@ -125,8 +126,10 @@
 	}
 	
 	function setEyes(race) {
-		if (race == "human") { choices = ["brown", "blue", "green"]; }
+		if (race == "human") { choices = ["brown", "brown", "blue", "green", "grey"]; }
 		if (race == "dwarf") { choices = ["brown", "dark brown", "light brown", "black", "grey", "dark grey"]; }
+		if (race == "forest elf") { choices = ["brown", "brown", "blue", "green", "green", " dark green", "light green", "grey"]; }
+		if (race == "high elf") { choices = ["brown", "brown", "blue", "green", "grey", "purple", "teal"]; }
 		else { choices = ["brown", "blue", "green"]; }
 		return(chooseArrElement(choices));
 	}
