@@ -39,44 +39,53 @@
 		  <option value="random">Random</option>
 		  <option value="human">Human</option>
 		  <option value="half-elf">Half-elf</option>
+		  <option value="half-orc">Half-orc</option>
 		  <option value="elf">Elf</option>
 		  <option value="dwarf">Dwarf</option>
-		  <option value="half-orc">Half-orc</option>
-		  <option value="orc">Orc</option>
 		  <option value="gnome">Gnome</option>
 		  <option value="halfling">Halfling</option>
+		  <option value="orc">Orc</option>
+		  <option value="tiefling">Tiefling</option>
 		  <option value="goliath">Goliath</option>
 		  <option value="goblin">Goblin</option>
-		  <option value="aasimar">Aasimar</option>
-		  <option value="tiefling">Tiefling</option>
-		  <option value="centaur">Centaur</option>
-		  <option value="satyr">Satyr</option>
 		  <option value="aarakocra">Aarakocra</option>
+		  <option value="aasimar">Aasimar</option>
 		  <option value="bugbear">Bugbear</option>
+		  <option value="centaur">Centaur</option>
 		  <option value="fey">Fey</option>
 		  <option value="firbolg">Firbolg</option>
 		  <option value="giant">Giant</option>
 		  <option value="githyanki">Githyanki</option>
 		  <option value="kobold">Kobold</option>
 		  <option value="lizardfolk">Lizardfolk</option>
+		  <option value="satyr">Satyr</option>
 		  <option value="tabaxi">Tabaxi</option>
 		  <option value="triton">Triton</option>
 		  <option value="warforged">Warforged</option>
 		  <option value="yuan-ti">Yuan-ti</option>
 		</select>
+		<label id="labelAge" for="ageSelect">Age?</label>
+		<select name="ageSelect" id="ageSelect">
+		  <option value="random">Random</option>
+		  <option value="child">Child</option>
+		  <option value="young">Young</option>
+		  <option value="middle-aged">Middle-aged</option>
+		  <option value="old">Old</option>
+		  <option value="very-old">Very-old</option>
+		</select>
+		<label id="labelSex" for="sexSelect">Sex?</label>
+		<select name="sexSelect" id="sexSelect">
+		  <option value="random">Random</option>
+		  <option value="male">Male</option>
+		  <option value="female">Female</option>
+		  <option value="eunich">Eunich</option>
+		  <option value="androgynous">Androgynous</option>
+
+		</select>
 	  <div class="tab-content" id="myTabContent">
 		  <div class="tab-pane show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
 			<p id="placeholder"></p>
 			<button class="random" id="random" content="random">Create Random NPC</button>
-			<button class="male" id="d6" content="6">Create Male NPC</button>
-			<button class="female" id="d8" content="8">Create Female NPC</button>
-			<button class="1die" id="d10" content="10">Roll D10</button>
-			<button class="1die" id="d12" content="12">Roll D12</button>
-			<button class="1die" id="d20" content="20">Roll D20</button>
-			<button class="1die" id="d100" content="100">Roll D100</button>
-			<button class="3die" id="3d6" content="6">Roll 3D6</button>
-			<button class="3die" id="3d8" content="8">Roll 3D8</button>
-			<button class="3die" id="3d10" content="10">Roll 3D10</button>
 		  </div>
 	  </div>
   </body>
@@ -89,7 +98,7 @@
 
 	currentNPC = [];
 	
-	function createRandomNPC() {
+	function createRandomNPC(race, age, sex) {
 		races = [ "human", "dwarf", "elf"]
 		ages = [ "child", "young", "young", "young", "middle-aged", "middle-aged", "middle-aged", "old", "old", "very-old"]
 		sexes = [ "male", "female", "male", "female", "male", "female", "male", "female", "male", "female", "male", "female", "male", "female", "male", "female", "eunich", "androgynous" ]
