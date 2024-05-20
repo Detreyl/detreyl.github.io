@@ -33,7 +33,19 @@
         <!-- <a href="https://getbootstrap.com" class="btn btn-primary">Read the Bootstrap docs</a> -->
         <!-- <a href="https://github.com/twbs/examples" class="btn btn-secondary">View on GitHub</a> -->
 	  </div>
-
+		  <div class="tab-pane fade" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+			<p id="placeholder"></p>
+			<button class="random" id="d4" content="random">Create Random NPC</button>
+			<button class="1die" id="d6" content="6">Roll D6</button>
+			<button class="1die" id="d8" content="8">Roll D8</button>
+			<button class="1die" id="d10" content="10">Roll D10</button>
+			<button class="1die" id="d12" content="12">Roll D12</button>
+			<button class="1die" id="d20" content="20">Roll D20</button>
+			<button class="1die" id="d100" content="100">Roll D100</button>
+			<button class="3die" id="3d6" content="6">Roll 3D6</button>
+			<button class="3die" id="3d8" content="8">Roll 3D8</button>
+			<button class="3die" id="3d10" content="10">Roll 3D10</button>
+		  </div>
   </body>
 
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
@@ -112,5 +124,10 @@
 	createRandomNPC();
 	createNPC("dwarf", "young", "male");
 	console.log(currentNPC)
+	
+	$(".random").click(function(){
+		createRandomNPC();
+	});
+		
   </script>
 </html>
