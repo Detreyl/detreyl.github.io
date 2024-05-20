@@ -99,7 +99,10 @@
 	currentNPC = [];
 	
 	function createRandomNPC(race, age, sex) {
+		if (race == "random") {
 		races = [ "human", "dwarf", "elf"]
+		}
+		else races = [ race ]
 		ages = [ "child", "young", "young", "young", "middle-aged", "middle-aged", "middle-aged", "old", "old", "very-old"]
 		sexes = [ "male", "female", "male", "female", "male", "female", "male", "female", "male", "female", "male", "female", "male", "female", "male", "female", "eunich", "androgynous" ]
 		createNPC(chooseArrElement(races), chooseArrElement(ages), chooseArrElement(sexes));
@@ -163,12 +166,13 @@
 		return(chooseArrElement(choices));
 	}
 	
-	createRandomNPC();
-	createNPC("dwarf", "young", "male");
 	console.log(currentNPC)
 	
 	$(".random").click(function(){
-		createRandomNPC();
+		race = document.getElementById('raceSelect').value;
+		age = document.getElementById('ageSelect').value;
+		sex = document.getElementById('sexSelect').value;
+		createRandomNPC(race, age, sex);
 	});
 		
   </script>
