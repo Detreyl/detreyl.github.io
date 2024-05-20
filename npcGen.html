@@ -48,10 +48,10 @@
 		currentNPC.race = race;
 		currentNPC.age = age;
 		currentNPC.sex = sex;
-		currentNPC.face.eyes = setEyes(race);
-		currentNPC.face.hair = setHair(race);
-		currentNPC.face.nose = setNose(race);
-		currentNPC.face.faceHair = setFHair(race);
+		currentNPC.eyes = setEyes(race);
+		currentNPC.hair = setHair(race);
+		currentNPC.nose = setNose(race);
+		currentNPC.faceHair = setFHair(race);
 		console.log(currentNPC.eyes + " eyes and " + currentNPC.hair + " hair.")
 	}
 	
@@ -68,7 +68,7 @@
 	}
 	
 	function setFHair(race) {
-		if (race == "human") { choices = ["thin moustache", "full beard", "goatee", "long beard", "short beard", "braided beard", "none", "none", "none", "none", "none", "none"]; }
+		if (race == "human") { choices = ["thin moustache", "full beard", "goatee", "long beard", "short beard", "braided beard", "stubble", "none", "none", "none", "none", "none", "none"]; }
 		if (race == "dwarf") { choices = ["thin moustache", "full beard", "long beard", "braided beard"]; }
 		if (currentNPC.sex == "female") { choices = ["none"]; }
 		return(chooseArrElement(choices));
