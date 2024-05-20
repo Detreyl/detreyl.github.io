@@ -42,10 +42,16 @@
   <script src="main.js"></script>
   <script>
 	function setPage() {
-	var currentTab = document.querySelector("#blankNav");
+	var currentTab = document.querySelector("#npcGen");
 	currentTab.classList.add("active");
 	}
 	
+	function setEyes() {
+		choices = ["brown", "blue", "green"]
+		console.log( choices[Math.floor(Math.random() * choices.length)])
+	}
+	
+	setEyes();
 	window.onload = setPage();
   </script>
 </html>
