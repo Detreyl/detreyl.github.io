@@ -45,6 +45,7 @@
 currentNPC = [];
 	
 	function createNPC(race) {
+		currentNPC.race = race;
 		currentNPC.eyes = setEyes(race);
 		currentNPC.hair = setHair(race);
 		console.log(currentNPC.eyes + " eyes and " + currentNPC.hair + " hair.")
@@ -58,12 +59,12 @@ currentNPC = [];
 	}
 	
 	function setHair(race) {
-		if (race == "human") { choices = ["light brown", "brown", "dirty blonde", "blonde", "black", "greying"]; }
-		if (race == "dwarf") { choices = ["brown", "dark brown", "light brown", "black", "grey", "dark grey", "black"]; }
+		if (race == "human") { choices = ["light brown", "brown", "dirty blonde", "blonde", "black", "greying", "red"]; }
+		if (race == "dwarf") { choices = ["brown", "dark brown", "light brown", "black", "grey", "dark grey", "black", "red", "orange"]; }
 		return(chooseArrElement(choices));
 	}
 	
-	createNPC("dwarf", currentNPC);
+	createNPC("dwarf");
 	console.log(currentNPC)
 	<!-- window.onload = setPage(); -->
   </script>
