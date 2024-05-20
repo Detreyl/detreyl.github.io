@@ -44,6 +44,13 @@
 
 	currentNPC = [];
 	
+	function createRandomNPC() {
+		races = [ "human", "dwarf", "elf"]
+		ages = [ "child", "young", "middle aged", "old", "very old"]
+		sexes = [ "male", "female", "male", "female", "male", "female", "male", "female", "male", "female", "male", "female", "male", "female", "male", "female", "eunich", "androgynous" ]
+		createNPC(chooseArrElement(races), chooseArrElement(ages), chooseArrElement(sexes));
+	}
+	
 	function createNPC(race, age, sex) {
 		currentNPC.race = race;
 		currentNPC.age = age;
@@ -68,16 +75,26 @@
 	}
 	
 	function setFHair(race) {
-		if (race == "human") { choices = ["thin moustache", "full beard", "goatee", "long beard", "short beard", "braided beard", "stubble", "none", "none", "none", "none", "none", "none"]; }
-		if (race == "dwarf") { 
+		if (race == "human") { 
 			if (currentNPC.age == "young") {
 				choices = ["none", "short beard", "stubble"]; 
 			}
-			if (currentNPC.age == "very young") {
+			if (currentNPC.age == "child") {
+					choices = ["none"]; 
+			}
+			else {
+				choices = ["thin mustache", "mustache", "full beard", "goatee", "long beard", "bushy beard", "short beard", "braided beard", "stubble", "none", "none", "none", "none", "none", "none"]; 
+			}
+		}
+		if (race == "dwarf") { 
+			if (currentNPC.age == "young") {
+				choices = ["short beard", "stubble"]; 
+			}
+			if (currentNPC.age == "child") {
 				choices = ["none", "stubble"]; 
 			}
 			else {
-				choices = ["short beard", "long beard", "braided beard", "elaborately braided beard"]; 
+				choices = ["short beard", "full beard", "bushy beard", "long beard", "braided beard", "elaborately braided beard"]; 
 			}
 		}
 		if (currentNPC.sex != "male") { choices = ["none"]; }
