@@ -41,21 +41,15 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="main.js"></script>
   <script>
-	<!-- #Doesn't work with dynamic navbar -->
-	<!-- function setPage() { --> 
-	<!-- var currentTab = document.querySelector("#npcGen"); -->
-	<!-- currentTab.classList.add("active"); -->
-	<!-- } -->
+
+currentNPC = [];
 	
-	<!-- returns a random element of an array -->
 	function createNPC(race) {
-		eyes = setEyes(race);
-		console.log(eyes)
+		currentNPC.eyes = setEyes(race);
+		currentNPC.hair = setHair(race);
+		console.log(currentNPC.eyes + " eyes and " + currentNPC.hair + " hair.")
 	}
 	
-	function chooseArrElement(array) {
-		return array[Math.floor(Math.random() * array.length)];
-	}
 	
 	function setEyes(race) {
 		if (race == "human") { choices = ["brown", "blue", "green"]; }
@@ -63,7 +57,14 @@
 		return(chooseArrElement(choices));
 	}
 	
-	createNPC("dwarf");
+	function setHair(race) {
+		if (race == "human") { choices = ["light brown", "brown", "dirty blonde", "blonde", "black", "greying"]; }
+		if (race == "dwarf") { choices = ["brown", "dark brown", "light brown", "black", "grey", "dark grey", "black"]; }
+		return(chooseArrElement(choices));
+	}
+	
+	createNPC("dwarf", currentNPC);
+	console.log(currentNPC)
 	<!-- window.onload = setPage(); -->
   </script>
 </html>
