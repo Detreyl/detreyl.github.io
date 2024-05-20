@@ -102,7 +102,7 @@
 		if (race == "random") {
 		races = [ "human", "dwarf", "elf"]
 		}
-		else races = [ race ]
+		else { races = [ race ] }
 		ages = [ "child", "young", "young", "young", "middle-aged", "middle-aged", "middle-aged", "old", "old", "very-old"]
 		sexes = [ "male", "female", "male", "female", "male", "female", "male", "female", "male", "female", "male", "female", "male", "female", "male", "female", "eunich", "androgynous" ]
 		createNPC(chooseArrElement(races), chooseArrElement(ages), chooseArrElement(sexes));
