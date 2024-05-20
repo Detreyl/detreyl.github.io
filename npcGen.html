@@ -47,9 +47,14 @@
 	<!-- currentTab.classList.add("active"); -->
 	<!-- } -->
 	
+	function chooseArrElement(array) {
+		return array[Math.floor(Math.random() * array.length)]
+	}
+	
 	function setEyes() {
 		choices = ["brown", "blue", "green"]
-		console.log( choices[Math.floor(Math.random() * choices.length)])
+		<!-- console.log( choices[Math.floor(Math.random() * choices.length)]) -->
+		console.log(chooseArrElement(choices))
 	}
 	
 	setEyes();
