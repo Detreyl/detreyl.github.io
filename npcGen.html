@@ -48,6 +48,7 @@ currentNPC = [];
 		currentNPC.race = race;
 		currentNPC.eyes = setEyes(race);
 		currentNPC.hair = setHair(race);
+		currentNPC.nose = setNose(race);
 		console.log(currentNPC.eyes + " eyes and " + currentNPC.hair + " hair.")
 	}
 	
@@ -61,6 +62,12 @@ currentNPC = [];
 	function setHair(race) {
 		if (race == "human") { choices = ["light brown", "brown", "dirty blonde", "blonde", "black", "greying", "red"]; }
 		if (race == "dwarf") { choices = ["brown", "dark brown", "light brown", "black", "grey", "dark grey", "black", "red", "orange"]; }
+		return(chooseArrElement(choices));
+	}
+	
+	function setNose(race) {
+		if (race == "human") { choices = ["narrow", "normal", "broad", "wide", "sharp", "round"]; }
+		if (race == "dwarf") { choices = ["round", "broad", "wide"]; }
 		return(chooseArrElement(choices));
 	}
 	
