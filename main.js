@@ -34,3 +34,8 @@ const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstra
 	}
 	
 	includeHTML();
+	
+	/* returns a random element of an array */
+	function chooseArrElement(array) {
+		return array[Math.floor(Math.random() * array.length)];
+	}
