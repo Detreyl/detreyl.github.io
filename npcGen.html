@@ -65,12 +65,14 @@
 	function setEyes(race) {
 		if (race == "human") { choices = ["brown", "blue", "green"]; }
 		if (race == "dwarf") { choices = ["brown", "dark brown", "light brown", "black", "grey", "dark grey"]; }
+		else { choices = ["brown", "blue", "green"]; }
 		return(chooseArrElement(choices));
 	}
 	
 	function setHair(race) {
 		if (race == "human") { choices = ["light brown", "brown", "dirty blonde", "blonde", "black", "greying", "red"]; }
 		if (race == "dwarf") { choices = ["brown", "dark brown", "light brown", "black", "grey", "dark grey", "black", "red", "orange"]; }
+		else { choices = ["light brown", "brown", "dirty blonde", "blonde", "black", "greying", "red"]; }
 		return(chooseArrElement(choices));
 	}
 	
@@ -97,6 +99,7 @@
 				choices = ["short beard", "full beard", "bushy beard", "long beard", "braided beard", "elaborately braided beard"]; 
 			}
 		}
+		else { choices = ["none"];}
 		if (currentNPC.sex != "male") { choices = ["none"]; }
 		return(chooseArrElement(choices));
 	}
