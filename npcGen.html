@@ -47,17 +47,23 @@
 	<!-- currentTab.classList.add("active"); -->
 	<!-- } -->
 	
+	<!-- returns a random element of an array -->
+	function createNPC(race) {
+		eyes = setEyes(race);
+		console.log(eyes)
+	}
+	
 	function chooseArrElement(array) {
-		return array[Math.floor(Math.random() * array.length)]
+		return array[Math.floor(Math.random() * array.length)];
 	}
 	
-	function setEyes() {
-		choices = ["brown", "blue", "green"]
-		<!-- console.log( choices[Math.floor(Math.random() * choices.length)]) -->
-		console.log(chooseArrElement(choices))
+	function setEyes(race) {
+		if (race == "human") { choices = ["brown", "blue", "green"]; }
+		if (race == "dwarf") { choices = ["brown", "dark brown", "light brown", "black", "grey", "dark grey"]; }
+		return(chooseArrElement(choices));
 	}
 	
-	setEyes();
+	createNPC("dwarf");
 	<!-- window.onload = setPage(); -->
   </script>
 </html>
