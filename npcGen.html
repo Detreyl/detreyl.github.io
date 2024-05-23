@@ -162,12 +162,11 @@
 				break;
 			case "female":
 				choices = femaleChoices;
+				break;
 			default:
 				choices.push.apply(choices, maleChoices);
 				choices.push.apply(choices, femaleChoices);
 		}
-		console.log(gender);
-		console.log(choices);
 		return(chooseArrElement(choices));
 		<!-- } -->
 	}
