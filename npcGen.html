@@ -162,29 +162,31 @@
 	}
 	
 	function setFHair(race) {
-		if (race == "human") { 
+		switch (race) {
+		case "human":
 			if (currentNPC.age == "young") {
 				choices = ["none", "short beard", "stubble"]; 
 			}
-			if (currentNPC.age == "child") {
+			else if (currentNPC.age == "child") {
 					choices = ["none"]; 
 			}
 			else {
 				choices = ["thin mustache", "mustache", "full beard", "goatee", "long beard", "bushy beard", "short beard", "braided beard", "stubble", "none", "none", "none", "none", "none", "none"]; 
 			}
-		}
-		else if (race == "dwarf") { 
+		
+		case "dwarf": 
 			if (currentNPC.age == "young") {
 				choices = ["short beard", "stubble"]; 
 			}
-			if (currentNPC.age == "child") {
+			else if (currentNPC.age == "child") {
 				choices = ["none", "stubble"]; 
 			}
 			else {
 				choices = ["short beard", "full beard", "bushy beard", "long beard", "braided beard", "elaborately braided beard"]; 
 			}
+		default:
+			choices = ["none"];
 		}
-		else { choices = ["none"];}
 		if (currentNPC.sex != "male") { choices = ["none"]; }
 		console.log(choices);
 		return(chooseArrElement(choices));
