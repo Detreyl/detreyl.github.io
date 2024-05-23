@@ -166,6 +166,9 @@
 				choices.push.apply(choices, femaleChoices);
 				choices.push.apply(choices, androgynousChoices);
 				break;
+			case "androgynous":
+				choices = androgynousChoices;
+				break;
 			default:
 				choices.push.apply(choices, maleChoices);
 				choices.push.apply(choices, femaleChoices);
@@ -240,7 +243,7 @@
 	}
 	
 	function setGoal(race) {
-		choices = ["To win the heart of my love, "+setName(currentNPC.race, "either")+".", "To be the best "+currentNPC.occupation+" ever!", "To find my missing brother.", "To find my missing sister.", "To find my missing child.", "To get free food.", "To end a curse.", "To provide for my family.", "To find a cure for my family member."]
+		choices = ["To win the heart of my love, "+setName(currentNPC.race, "either")+".", "To be the best "+currentNPC.occupation+" ever!", "To find my missing brother.", "To find my missing sister.", "To find my missing child.", "To get free food.", "To end a curse.", "To provide for my family.", "To find a cure for my family member.", "To become an adventurer.", "To be more pious.", "To stop drinking.", "To beautify their garden.", "To forage.", "To return home.", "Solitude.", "To read every book they can get.", "To end gambling.", "To gamble.", ]
 		return(chooseArrElement(choices));
 	}
 	
