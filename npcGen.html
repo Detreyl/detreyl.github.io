@@ -193,11 +193,22 @@
 		return(chooseArrElement(choices));
 	}
 	function setNose(race) {
-		if (race == "human") { choices = ["narrow", "normal", "broad", "wide", "sharp", "round"]; }
-		else if (race == "dwarf") { choices = ["round", "broad", "wide"]; }
-		else if (race == "forest elf") { choices = ["narrow", "normal", "sharp"]; }
-		else if (race == "high elf") { choices = ["narrow", "normal", "sharp"]; }
-		else { choices = ["narrow", "normal", "round", "wide"]; }
+		switch (race) {
+			case "human": 
+				choices = ["narrow", "normal", "broad", "wide", "sharp", "round"];
+				break;
+			case "dwarf":
+				choices = ["round", "broad", "wide"];
+				break;
+			case "forest elf":
+				choices = ["narrow", "normal", "sharp"];
+				break;
+			case "high elf":
+				choices = ["narrow", "normal", "sharp"];
+				break;
+			default:
+				choices = ["narrow", "normal", "round", "wide"];
+		}
 		return(chooseArrElement(choices));
 	}
 	
