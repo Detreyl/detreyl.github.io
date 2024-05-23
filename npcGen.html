@@ -234,7 +234,7 @@
 	}
 	
 	function setGoal(race) {
-		choices = ["To win the heart of my love, "+setName(currentNPC.race, "female")+".", "To be the best "+currentNPC.occupation+" ever!", "To find my missing brother.", "To find my missing sister.", "To find my missing child.", "To get free food.", "To end a curse.", "To provide for my family.", "To find a cure for my family member."]
+		choices = ["To win the heart of my love, "+setName(currentNPC.race, "either")+".", "To be the best "+currentNPC.occupation+" ever!", "To find my missing brother.", "To find my missing sister.", "To find my missing child.", "To get free food.", "To end a curse.", "To provide for my family.", "To find a cure for my family member."]
 		return(chooseArrElement(choices));
 	}
 	
@@ -244,7 +244,6 @@
 	
 	function setStake(race) {
 		var r=Math.ceil(Math.random()*100);
-		console.log(r)
 		if (r <= 5) return "high"; 
 		if (r <= 25) return "low"; 
 		if (r <= 100) return "average";
