@@ -123,6 +123,10 @@
 		currentNPC.hair = setHair(race);
 		currentNPC.nose = setNose(race);
 		currentNPC.faceHair = setFHair(race);
+		currentNPC.occupation = setOccupation(race);
+		currentNPC.goal = setGoal(race);
+		currentNPC.attitude = setAttitude(race);
+		currentNPC.stake = setStake(race);
 		console.log("This is a " +currentNPC.race+ " " +currentNPC.age+ " " +currentNPC.sex+ ", with " +currentNPC.eyes+ " eyes and " +currentNPC.hair+ " hair. As for facial hair, they have " +currentNPC.faceHair+".")
 		displayNPC();
 	}
@@ -190,9 +194,31 @@
 		return(chooseArrElement(choices));
 	}
 	
+	function setOccupation(race) {
+		if (race == "dwarf") { choices = ["blacksmith", "stoneworker", "tinkerer", "cook", "barkeeper", "brewer", "priest", "mercenary", "soldier", "guard", "hunter"]}
+		else { choices = ["blacksmith", "stoneworker", "tinkerer", "cook", "rancher", "shaman", "bottle maker" "stablehand", "innkeeper", "washer", "town cryer", "tailor", "portrait painter", "cobbler", "lamplighter", "trapper", "fletcher", "tanner", "herbalist", "farmer", "carpenter", "stonemason", "miner", "fortune teller", "baker", "town guard", "rat catcher", "doctor", "messenger", "lawyer", "banker", "tamer", "guide", "cartographer", "sheriff", "dairyhand", "bookkeeper", "academic", "accountant", "actor", "apprentice", "artisian", "assassin", "bandit", "bard", "beggar", "bounty hunter", "brewer", "con artist", "cook", "druid", "fisher", "gambler", "gravedigger", "hunter", "jester", "knight", "laborer", "lawman", "lumberjack", "mercenary", "noble", "priest", "ranger", "sailor", "scribe", "servant", "shepperd", "slave", "soldier", "thief", "thug", "trader", "treasure hunter", "wanderer", "wizard", "wrestler", "lighthouse keeper", "landlord", "author", "lookout", "clocksmith", "exorcist", "soapmaker", "beekeeper", "botanist", "alchemist", "potion maker", "librarian", "bartender", "toymaker", "woodcarver", "squire", "roofer", "sculptor", "scholar", "nurse", "clergy", "mortician", "historian", "gladiator", "barber", "monk", "pickpocket", "rogue", "hedgemage", "wizard", "court wizard", "circus performer", "templar", "paladin", "guard"] }
+		return(chooseArrElement(choices));
+	}
+	
+	function setGoal(race) {
+		choices = ["To win the heart of my love, "+setName(currentNPC.race)]
+		return(chooseArrElement(choices));
+	}
+	
+	function setAttitude(race) {
+		return "lazy";
+	}
+	
+	function setStake(race) {
+		var r=Math.ceil(Math.random()*100);
+		if (r <= 5) return "high"; 
+		if (r <= 25) return "low"; 
+		if (r <= 70) return "average";
+	}
+	
 	function displayNPC(){
 		var placeholder = document.getElementById('placeholder');
-		var displayInfo = "This is a " +currentNPC.race+ " " +currentNPC.age+ " " +currentNPC.sex+ ", with " +currentNPC.eyes+ " eyes and " +currentNPC.hair+ " hair. As for facial hair, they have " +currentNPC.faceHair+"."
+		var displayInfo = "This is a " +currentNPC.race+ " " +currentNPC.age+ " " +currentNPC.sex+ ", with " +currentNPC.eyes+ " eyes and " +currentNPC.hair+ " hair.<br> Facial hair: " +currentNPC.faceHair+". <br> Occupation: " +currentNPC.occupation+". <br>"
 		placeholder.innerHTML = displayInfo;
 		
 	}
