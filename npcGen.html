@@ -243,17 +243,18 @@
 	}
 	
 	function setGoal(race) {
-		choices = ["To win the heart of my love, "+setName(currentNPC.race, "either")+".", "To be the best "+currentNPC.occupation+" ever!", "To find my missing brother.", "To find my missing sister.", "To find my missing child.", "To get free food.", "To end a curse.", "To provide for my family.", "To find a cure for my family member.", "To become an adventurer.", "To be more pious.", "To stop drinking.", "To beautify their garden.", "To forage.", "To return home.", "Solitude.", "To read every book they can get.", "To end gambling.", "To gamble.", ]
+		choices = ["To win the heart of my love, "+setName(currentNPC.race, "either")+".", "To be the best "+currentNPC.occupation+" ever!", "To find my missing brother.", "To find my missing sister.", "To find my missing child.", "To get free food.", "To end a curse.", "To provide for my family.", "To find a cure for my family member.", "To become an adventurer.", "To be more pious.", "To stop drinking.", "To beautify their garden.", "To forage.", "To return home.", "Solitude.", "To read every book they can get.", "To end gambling.", "To gamble.", "To amass a fortune.", "To get back to my obsession, tinkering.", "To eat the most delicious food."]
 		return(chooseArrElement(choices));
 	}
 	
 	function setAttitude(race) {
-		choices = ["lazy", "aggressive", "insulting", "calm", "kind", "peaceful", "angry", "helpful", "apathetic"]
+		choices = ["lazy", "aggressive", "insulting", "calm", "kind", "peaceful", "angry", "helpful", "apathetic", "wholesome", "gentle", "brutish", "hateful", "energetic", "cute", "flamboyant", "obsessive"]
 		return(chooseArrElement(choices));
 	}
 	
 	function setStake(race) {
 		var r=Math.ceil(Math.random()*100);
+		if (r <= 1) return "extreme"; 
 		if (r <= 5) return "high"; 
 		if (r <= 25) return "low"; 
 		if (r <= 100) return "average";
