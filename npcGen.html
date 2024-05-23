@@ -154,7 +154,7 @@
 		var gender = sex;
 		if (sex == "eunich")var gender = "male";
 			if (gender == "male") {
-				choices1 = ["Adam", "Benjamin", "Cyril", "Cyrus", "Charles", "Derik", "Eric", "Fredrick", "Gilbert", "Herbert", "Isaac", "James", "Kyle", "Lance", "Melburn", "Nathaniel", "Ozzy", "Phillip", "Quincy", "Robert", "Steve", "Timothy", "Uriah", "Vincent", "Winston", "Xed", "Yemir", "Zed"]
+				choices1 = ["Adam", "Abe", "Benjamin", "Bruce", "Bryce", "Bennett", "Blake", "Brandon", "Blaine", "Cedric", "Cyril", "Cyrus", "Charles", "Derik", "Eric", "Fredrick", "Gilbert", "Herbert", "Isaac", "James", "Kyle", "Lance", "Melburn", "Nathaniel", "Ozzy", "Phillip", "Quincy", "Robert", "Steve", "Timothy", "Uriah", "Vincent", "Winston", "Xed", "Yemir", "Zed"]
 			} else { choices1 = ["Anna", "Anabelle", "Abigail", "Addison", "Beth", "Claire", "Cynthia", "Dorathy", "Eliza", "Fran", "Gale", "Heather", "Isa", "Isla", "Jasmine", "Kara", "Kelly", "Kyra", "Linda", "Lisa", "Mary", "Marian", "Melantha", "Nezra", "Ophillia", "Persa", "Quella", "Rachel", "Sera", "Tina", "Ulga", "Veronica", "Wendy", "Xena", "Yesra", "Zisa", "Zoe"]
 			}
 			return(chooseArrElement(choices1));
@@ -165,6 +165,7 @@
 		if (race == "human") { 
 			if (currentNPC.age == "young") {
 				choices = ["none", "short beard", "stubble"]; 
+				console.log("Young");
 			}
 			if (currentNPC.age == "child") {
 					choices = ["none"]; 
