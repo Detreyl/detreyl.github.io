@@ -154,15 +154,17 @@
 		var gender = sex;
 		var choices = [];
 		if (sex == "eunich")var gender = "male";
-		var maleChoices = ["Adam", "Abe", "Benjamin", "Bruce", "Bryce", "Bennett", "Brandon", "Blaine", "Cedric", "Cyril", "Cyrus", "Charles", "Derik", "David", "Eric", "Edwin", "Fredrick", "Frank", "Glenn", "George", "Gilbert", "Henry", "Herbert", "Isaac", "Jack", "James", "Jaden", "Julius", "Kyle", "Lance", "Lee", "Louis", "Maxwell", "Melburn", "Nathaniel", "Nicolas", "Ozzy", "Phillip", "Patrick", "Quincy", "Raphael", "Raymond", "Robert", "Ryan", "Samuel", "Steve", "Stephen", "Timothy", "Uriah", "Valentino", "Victor", "Vincent", "Winston", "Xed", "Yemir", "Zed"];
-		var femaleChoices = ["Anna", "Anabelle", "Abigail", "Addison", "Beth", "Claire", "Christina", "Christine", "Cynthia", "Dorathy", "Edwina", "Eliza", "Fran", "Gale", "Gleana", "Glenda", "Heather", "Isa", "Isla", "Jasmine", "Jackie", "Jessica", "Julian", "Kara", "Kera", "Kyra", "Linda", "Lisa", "Louisiana", "Louise", "Mary", "Marian", "Melantha", "Nezra", "Nicole", "Ophillia", "Persa", "Patricia", "Quella", "Rachel", "Samantha", "Sera", "Stephanie", "Tina", "Ulga", "Valerie", "Veronica", "Victoria", "Wendy", "Xena", "Yesra", "Zisa", "Zoe"];
-		var androgynousChoices = ["Alex", "Angel", "Ashley", "Ali", "Ashton", "Adrian", "Aisley", "Blake", "Andy", "Archer", "Rune", "Arden", "Ari", "Armani", "Arya", "Ash", "Aspen", "Aubrey", "August", "Avery", "Avis", "Bailey", "Billy", "Billie", "Blair", "Bobby", "Briar", "Brooke", "Carmen", "Carter", "Casey", "Cameron", "Cassidy", "Charley", "Charlie", "Chris", "Cody", "Corey", "Delta", "Dorian", "Drew", "Ed", "Emery", "Emory", "Erin", "Ezra", "Flynn", "Genesis", "Glen", "Harley", "Hadley", "Harper", "Haven", "Honor", "Hunter", "Indigo", "Jade", "Jan", "Jean", "Jesse", "Jude", "Jody", "Jules", "Kaden", "Kai", "Kameron", "Kelly", "Kelsey", "Kerry", "Kim", "Kit", "Kid", "Kyrie", "Lake", "Lane", "Les", "Lennon", "Linden", "Logan", "Loren", "Lou", "Mackenzie", "Madison", "Marley", "Mason", "Mack", "Mckenzie", "Michael", "Miller", "Montana", "Morgan", "Murphy", "Nicky", "Nico", "Nikita", "Noelle", "Nova", "Ocean", "Paige", "Paris", "Parker", "Pat", "Peace", "Perry", "Piper", "Poet", "Quinn", "Ramsey", "Ray", "Rayne", "Rain", "Reed", "Reese", "Remi", "Remy", "Rene", "River", "Rowan", "Ripley", "Riley", "Roan", "Robin", "Robyn", "Rory", "Rowan", "Ryder", "Sage", "Salem", "Sam", "Sean", "Sasha", "Shawn", "Sidney", "Skye", "Skylar", "Summer", "Spring", "Sterling", "Stevie", "Storm", "Sydney", "Tanner", "Taylor", "Teri", "Toni", "Tori", "Tracy", "Tyler", "Val", "Vick", "Wynn", "Winter", "Wren", "Zephyr"];
+		var maleChoices = ["Adam", "Abe", "Alexander", "Benjamin", "Bruce", "Bryce", "Bennett", "Brandon", "Blaine", "Cedric", "Cyril", "Cyrus", "Charles", "Derik", "David", "Eric", "Edwin", "Fredrick", "Frank", "Glenn", "George", "Gilbert", "Henry", "Herbert", "Isaac", "Jack", "James", "Jaden", "Julius", "Kyle", "Lance", "Lee", "Louis", "Maxwell", "Melburn", "Nathaniel", "Nicolas", "Ozzy", "Phillip", "Patrick", "Quincy", "Raphael", "Raymond", "Robert", "Ryan", "Samuel", "Steve", "Stephen", "Timothy", "Uriah", "Valentino", "Victor", "Vincent", "Winston", "Xed", "Yemir", "Zed"];
+		var femaleChoices = ["Alexandra", "Anna", "Anabelle", "Abigail", "Addison", "Beth", "Claire", "Christina", "Christine", "Cynthia", "Dorathy", "Edwina", "Eliza", "Fran", "Gale", "Gleana", "Glenda", "Heather", "Isa", "Isla", "Jasmine", "Jackie", "Jessica", "Julian", "Kara", "Kera", "Kyra", "Linda", "Lisa", "Louisiana", "Louise", "Mary", "Marian", "Melantha", "Nezra", "Nicole", "Ophillia", "Persa", "Patricia", "Quella", "Rachel", "Samantha", "Sera", "Stephanie", "Tina", "Ulga", "Valerie", "Veronica", "Victoria", "Wendy", "Xena", "Yesra", "Zisa", "Zoe"];
+		var androgynousChoices = ["Alex", "Angel", "Ashley", "Ali", "Ashton", "Ash", "Adrian", "Aisley", "Blake", "Andy", "Archer", "Rune", "Arden", "Ari", "Armani", "Arya", "Ash", "Aspen", "Aubrey", "August", "Avery", "Avis", "Bailey", "Billy", "Billie", "Blair", "Bobby", "Briar", "Brooke", "Carmen", "Carter", "Casey", "Cameron", "Cassidy", "Charley", "Charlie", "Chris", "Cody", "Corey", "Delta", "Dorian", "Drew", "Ed", "Emery", "Emory", "Erin", "Ezra", "Flynn", "Genesis", "Glen", "Harley", "Hadley", "Harper", "Haven", "Honor", "Hunter", "Indigo", "Jade", "Jan", "Jean", "Jesse", "Jude", "Jody", "Jules", "Kaden", "Kai", "Kameron", "Kelly", "Kelsey", "Kerry", "Kim", "Kit", "Kid", "Kyrie", "Lake", "Lane", "Les", "Lennon", "Linden", "Logan", "Loren", "Lou", "Mackenzie", "Madison", "Marley", "Mason", "Mack", "Mckenzie", "Michael", "Miller", "Montana", "Morgan", "Murphy", "Nicky", "Nico", "Nikita", "Noelle", "Nova", "Ocean", "Paige", "Paris", "Parker", "Pat", "Peace", "Perry", "Piper", "Poet", "Quinn", "Ramsey", "Ray", "Rayne", "Rain", "Reed", "Reese", "Remi", "Remy", "Rene", "River", "Rowan", "Ripley", "Riley", "Roan", "Robin", "Robyn", "Rory", "Rowan", "Ryder", "Sage", "Salem", "Sam", "Sean", "Sasha", "Shawn", "Sidney", "Skye", "Skylar", "Summer", "Spring", "Sterling", "Stevie", "Storm", "Sydney", "Tanner", "Taylor", "Teri", "Toni", "Tori", "Tracy", "Tyler", "Val", "Vick", "Wynn", "Winter", "Wren", "Zephyr"];
 		switch (gender) {
 			case "male":
-				choices = maleChoices;
+				choices.push.apply(choices, maleChoices);
+				choices.push.apply(choices, androgynousChoices);
 				break;
 			case "female":
-				choices = femaleChoices;
+				choices.push.apply(choices, femaleChoices);
+				choices.push.apply(choices, androgynousChoices);
 				break;
 			default:
 				choices.push.apply(choices, maleChoices);
@@ -225,13 +227,13 @@
 	function setOccupation(race) {
 		switch (race) {
 			case "dwarf":
-				choices = ["weaponsmith", "armorer", "blacksmith", "stoneworker", "tinkerer", "cook", "barkeeper", "brewer", "priest", "mercenary", "soldier", "guard", "hunter"];
+				choices = ["weaponsmith", "armorer", "blacksmith", "stoneworker", "tinkerer", "cook", "barkeeper", "brewer", "priest", "mercenary", "soldier", "guard", "hunter", "healer"];
 				break;
 			case "forest elf":
-				choices = ["ranger", "hunter", "carpenter", "cook", "alchemist", "herbalist", "tamer", "innkeeper"];
+				choices = ["ranger", "hunter", "carpenter", "cook", "alchemist", "herbalist", "tamer", "innkeeper", "healer"];
 				break;
 			default: 
-				choices = ["blacksmith", "stoneworker", "tinkerer", "cook", "rancher", "shaman", "bottle maker", "stablehand", "innkeeper", "washer", "town cryer", "tailor", "portrait painter", "cobbler", "lamplighter", "trapper", "fletcher", "tanner", "herbalist", "farmer", "carpenter", "stonemason", "miner", "fortune teller", "baker", "town guard", "rat catcher", "doctor", "messenger", "lawyer", "banker", "tamer", "guide", "cartographer", "sheriff", "dairyhand", "bookkeeper", "academic", "accountant", "actor", "apprentice", "artisian", "assassin", "bandit", "bard", "beggar", "bounty hunter", "brewer", "con artist", "cook", "druid", "fisher", "gambler", "gravedigger", "hunter", "jester", "knight", "laborer", "lawman", "lumberjack", "mercenary", "noble", "priest", "ranger", "sailor", "scribe", "servant", "shepperd", "slave", "soldier", "thief", "thug", "trader", "treasure hunter", "wanderer", "wizard", "wrestler", "lighthouse keeper", "landlord", "author", "lookout", "clocksmith", "exorcist", "soapmaker", "beekeeper", "botanist", "alchemist", "potion maker", "librarian", "bartender", "toymaker", "woodcarver", "squire", "roofer", "sculptor", "scholar", "nurse", "clergy", "mortician", "historian", "gladiator", "barber", "monk", "pickpocket", "rogue", "hedgemage", "wizard", "court wizard", "circus performer", "templar", "paladin", "guard"]
+				choices = ["blacksmith", "stoneworker", "tinkerer", "cook", "rancher", "shaman", "bottle maker", "stablehand", "innkeeper", "washer", "town cryer", "tailor", "portrait painter", "cobbler", "lamplighter", "trapper", "fletcher", "tanner", "herbalist", "farmer", "carpenter", "stonemason", "miner", "fortune teller", "baker", "town guard", "rat catcher", "doctor", "messenger", "lawyer", "banker", "tamer", "guide", "cartographer", "sheriff", "dairyhand", "bookkeeper", "academic", "accountant", "actor", "apprentice", "artisian", "assassin", "bandit", "bard", "beggar", "bounty hunter", "brewer", "con artist", "cook", "druid", "fisher", "gambler", "gravedigger", "hunter", "jester", "knight", "laborer", "lawman", "lumberjack", "mercenary", "noble", "priest", "ranger", "sailor", "scribe", "servant", "shepperd", "slave", "soldier", "thief", "thug", "trader", "treasure hunter", "wanderer", "wizard", "wrestler", "lighthouse keeper", "landlord", "author", "lookout", "clocksmith", "exorcist", "soapmaker", "beekeeper", "botanist", "alchemist", "potion maker", "librarian", "bartender", "toymaker", "woodcarver", "squire", "roofer", "sculptor", "scholar", "nurse", "clergy", "mortician", "historian", "gladiator", "barber", "monk", "pickpocket", "rogue", "hedgemage", "wizard", "court wizard", "circus performer", "templar", "paladin", "guard", "healer"]
 		}
 		return(chooseArrElement(choices));
 	}
@@ -242,7 +244,8 @@
 	}
 	
 	function setAttitude(race) {
-		return "lazy";
+		choices = ["lazy", "aggressive", "insulting", "calm", "kind", "peaceful", "angry", "helpful", "apathetic"]
+		return(chooseArrElement(choices));
 	}
 	
 	function setStake(race) {
@@ -257,7 +260,7 @@
 		if (currentNPC.faceHair != "none") { var facialHair = "<br> Facial hair: " +currentNPC.faceHair+"."; }
 		else var facialHair = "";
 		var placeholder = document.getElementById('placeholder');
-		var displayInfo = currentNPC.name+ " is a " +currentNPC.age+ " " +currentNPC.race+ " " +currentNPC.sex+ ", with " +currentNPC.eyes+ " eyes and " +currentNPC.hair+ " hair. "+facialHair+"<br> Occupation: " +currentNPC.occupation+".<br> Goal: "+currentNPC.goal+" <br> Attitude: "+currentNPC.attitude+". <br> Stake:"+currentNPC.stake
+		var displayInfo = currentNPC.name+ " is a " +currentNPC.age+ " " +currentNPC.race+ " " +currentNPC.sex+ ", with " +currentNPC.eyes+ " eyes and " +currentNPC.hair+ " hair. "+facialHair+"<br> Occupation: " +currentNPC.occupation+".<br> Goal: "+currentNPC.goal+" <br> Attitude: "+currentNPC.attitude+". <br> Stake: "+currentNPC.stake
 		placeholder.innerHTML = displayInfo;
 	}
 	
