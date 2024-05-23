@@ -219,8 +219,9 @@
 	}
 	
 	function displayNPC(){
+		var facialHair = "<br> Facial hair: " +currentNPC.faceHair.
 		var placeholder = document.getElementById('placeholder');
-		var displayInfo = "This is a " +currentNPC.race+ " " +currentNPC.age+ " " +currentNPC.sex+ ", with " +currentNPC.eyes+ " eyes and " +currentNPC.hair+ " hair.<br> Facial hair: " +currentNPC.faceHair+". <br> Occupation: " +currentNPC.occupation+". <br>"
+		var displayInfo = "This is a " +currentNPC.race+ " " +currentNPC.age+ " " +currentNPC.sex+ ", with " +currentNPC.eyes+ " eyes and " +currentNPC.hair+ " hair. "+facialHair+"<br> Occupation: " +currentNPC.occupation+".<br> Goal: "+currentNPC.goal+" <br> Attitude: "+currentNPC.attitude+". <br> Stake:"+currentNPC.stake+"."
 		placeholder.innerHTML = displayInfo;
 		
 	}
