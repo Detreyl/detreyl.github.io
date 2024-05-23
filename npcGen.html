@@ -165,7 +165,6 @@
 		if (race == "human") { 
 			if (currentNPC.age == "young") {
 				choices = ["none", "short beard", "stubble"]; 
-				console.log("Young");
 			}
 			if (currentNPC.age == "child") {
 					choices = ["none"]; 
@@ -187,6 +186,7 @@
 		}
 		else { choices = ["none"];}
 		if (currentNPC.sex != "male") { choices = ["none"]; }
+		console.log(choices);
 		return(chooseArrElement(choices));
 	}
 	function setNose(race) {
