@@ -163,7 +163,8 @@
 			case "female":
 				choices = femaleChoices;
 			default:
-				choices.push.apply(maleChoices, femaleChoices);
+				choices.push.apply(choices, maleChoices);
+				choices.push.apply(choices, femaleChoices);
 		}
 		console.log(gender);
 		console.log(choices);
