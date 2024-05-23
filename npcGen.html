@@ -189,7 +189,6 @@
 			choices = ["none"];
 		}
 		if (currentNPC.sex != "male") { choices = ["none"]; }
-		console.log(choices);
 		return(chooseArrElement(choices));
 	}
 	function setNose(race) {
@@ -213,10 +212,13 @@
 	}
 	
 	function setOccupation(race) {
-		if (race == "dwarf") { choices = ["blacksmith", "stoneworker", "tinkerer", "cook", "barkeeper", "brewer", "priest", "mercenary", "soldier", "guard", "hunter"]}
-		else { choices = [
-			"blacksmith", "stoneworker", "tinkerer", "cook", "rancher", "shaman", "bottle maker", "stablehand", "innkeeper", "washer", "town cryer", "tailor", "portrait painter", "cobbler", "lamplighter", "trapper", "fletcher", "tanner", "herbalist", "farmer", "carpenter", "stonemason", "miner", "fortune teller", "baker", "town guard", "rat catcher", "doctor", "messenger", "lawyer", "banker", "tamer", "guide", "cartographer", "sheriff", "dairyhand", "bookkeeper", "academic", "accountant", "actor", "apprentice", "artisian", "assassin", "bandit", "bard", "beggar", "bounty hunter", "brewer", "con artist", "cook", "druid", "fisher", "gambler", "gravedigger", "hunter", "jester", "knight", "laborer", "lawman", "lumberjack", "mercenary", "noble", "priest", "ranger", "sailor", "scribe", "servant", "shepperd", "slave", "soldier", "thief", "thug", "trader", "treasure hunter", "wanderer", "wizard", "wrestler", "lighthouse keeper", "landlord", "author", "lookout", "clocksmith", "exorcist", "soapmaker", "beekeeper", "botanist", "alchemist", "potion maker", "librarian", "bartender", "toymaker", "woodcarver", "squire", "roofer", "sculptor", "scholar", "nurse", "clergy", "mortician", "historian", "gladiator", "barber", "monk", "pickpocket", "rogue", "hedgemage", "wizard", "court wizard", "circus performer", "templar", "paladin", "guard"
-		]}
+		switch (race) {
+			case "dwarf":
+				choices = ["blacksmith", "stoneworker", "tinkerer", "cook", "barkeeper", "brewer", "priest", "mercenary", "soldier", "guard", "hunter"]}
+				break;
+			default: 
+				choices = ["blacksmith", "stoneworker", "tinkerer", "cook", "rancher", "shaman", "bottle maker", "stablehand", "innkeeper", "washer", "town cryer", "tailor", "portrait painter", "cobbler", "lamplighter", "trapper", "fletcher", "tanner", "herbalist", "farmer", "carpenter", "stonemason", "miner", "fortune teller", "baker", "town guard", "rat catcher", "doctor", "messenger", "lawyer", "banker", "tamer", "guide", "cartographer", "sheriff", "dairyhand", "bookkeeper", "academic", "accountant", "actor", "apprentice", "artisian", "assassin", "bandit", "bard", "beggar", "bounty hunter", "brewer", "con artist", "cook", "druid", "fisher", "gambler", "gravedigger", "hunter", "jester", "knight", "laborer", "lawman", "lumberjack", "mercenary", "noble", "priest", "ranger", "sailor", "scribe", "servant", "shepperd", "slave", "soldier", "thief", "thug", "trader", "treasure hunter", "wanderer", "wizard", "wrestler", "lighthouse keeper", "landlord", "author", "lookout", "clocksmith", "exorcist", "soapmaker", "beekeeper", "botanist", "alchemist", "potion maker", "librarian", "bartender", "toymaker", "woodcarver", "squire", "roofer", "sculptor", "scholar", "nurse", "clergy", "mortician", "historian", "gladiator", "barber", "monk", "pickpocket", "rogue", "hedgemage", "wizard", "court wizard", "circus performer", "templar", "paladin", "guard"]
+		}
 		return(chooseArrElement(choices));
 	}
 	
