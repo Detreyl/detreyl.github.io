@@ -248,13 +248,13 @@
 	}
 	
 	function setAttitude(race) {
-		choices = ["lazy", "aggressive", "insulting", "calm", "kind", "peaceful", "angry", "helpful", "apathetic", "wholesome", "gentle", "brutish", "hateful", "energetic", "cute", "flamboyant", "obsessive"]
+		choices = ["lazy", "aggressive", "insulting", "calm", "kind", "peaceful", "angry", "helpful", "apathetic", "wholesome", "gentle", "brutish", "hateful", "energetic", "cute", "flamboyant", "obsessive", "callous", "jaded", "happy", "sad", "depressed", "traumatized", "scared"]
 		return(chooseArrElement(choices));
 	}
 	
 	function setStake(race) {
 		var r=Math.ceil(Math.random()*100);
-		if (r <= 1) return "extreme"; 
+		if (r <= 1) return "<b>extreme</b>"; 
 		if (r <= 5) return "high"; 
 		if (r <= 25) return "low"; 
 		if (r <= 100) return "average";
