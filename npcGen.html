@@ -285,7 +285,7 @@
 	}
 	
 	$(".random").click(function(){
-		if (currentNPC !== 'undefined') previousNPC = currentNPC;
+		if (currentNPC !== 'undefined') previousNPC = currentNPC.slice();
 		race = document.getElementById('raceSelect').value;
 		age = document.getElementById('ageSelect').value;
 		sex = document.getElementById('sexSelect').value;
