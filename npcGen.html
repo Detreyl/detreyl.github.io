@@ -266,9 +266,11 @@
 		//only display facial hair section if the NPC has facial hair
 		if (curNPC.faceHair != "none") { var facialHair = "<br> Facial hair: " +curNPC.faceHair+"."; }
 		else var facialHair = "";
+		//have correct grammar in regards a/an
 		if (curNPC.age != "old") { var npcAge = "a " + curNPC.age;}
 		else var npcAge = "an "+ curNPC.age;
 		var placeholder = document.getElementById('placeholder');
+		//capitalize the first letter of the OGAS when it is listed
 		var npcOccupation = capitalizeFirstLetter(curNPC.occupation);
 		var npcGoal = capitalizeFirstLetter(curNPC.goal);
 		var npcAttitude = capitalizeFirstLetter(curNPC.attitude);
