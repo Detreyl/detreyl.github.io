@@ -99,6 +99,7 @@
   <script>
 
 	currentNPC = [];
+	previousNPC = [];
 	
 	function createRandomNPC(race, age, sex) {
 		if (race == "random") {
@@ -284,8 +285,23 @@
 		placeholder.innerHTML = displayInfo;
 	}
 	
+	function createPreviousNPC(curNPC) {
+		previousNPC.race = currentNPC.race;
+		previousNPC.age = currentNPC.age;
+		previousNPC.sex = currentNPC.sex;
+		previousNPC.name = currentNPC.name;
+		previousNPC.eyes = currentNPC.eyes;
+		previousNPC.hair = currentNPC.hair;
+		previousNPC.nose = currentNPC.nose;
+		previousNPC.faceHair = currentNPC.faceHair;
+		previousNPC.occupation = currentNPC.occupation;
+		previousNPC.goal = currentNPC.goal;
+		previousNPC.attitude = currentNPC.attitude;
+		previousNPC.stake = currentNPC.stake;
+	}
+	
 	$(".random").click(function(){
-		if (currentNPC !== 'undefined') previousNPC = currentNPC.slice();
+		if (currentNPC !== 'undefined') createPreviousNPC(currentNPC);
 		race = document.getElementById('raceSelect').value;
 		age = document.getElementById('ageSelect').value;
 		sex = document.getElementById('sexSelect').value;
