@@ -287,10 +287,10 @@
 	});
 	
 	$(".rerollOGAS").click(function(){
-		setOccupation(currentNPC.race);
-		setGoal(currentNPC.race);
-		setAttitude(currentNPC.race);
-		setStake(currentNPC.race);
+		currentNPC.occupation = setOccupation(race);
+		currentNPC.goal = setGoal(race);
+		currentNPC.attitude = setAttitude(race);
+		currentNPC.stake = setStake(race);
 		displayNPC(currentNPC);
 		console.log(currentNPC.occupation);
 	});
