@@ -39,3 +39,8 @@ const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstra
 	function chooseArrElement(array) {
 		return array[Math.floor(Math.random() * array.length)];
 	}
+
+
+	function capitalizeFirstLetter(string) {
+		return string.charAt(0).toUpperCase() + string.slice(1);
+	}
