@@ -267,7 +267,11 @@
 		if (curNPC.age != "old") { var npcAge = "a " + curNPC.age;}
 		else var npcAge = "an "+ curNPC.age;
 		var placeholder = document.getElementById('placeholder');
-		var displayInfo = curNPC.name+ " is " +npcAge+ " " +curNPC.race+ " " +curNPC.sex+ ", with " +curNPC.eyes+ " eyes and " +curNPC.hair+ " hair. They have a "+curNPC.nose+" nose for their species."+facialHair+"<br> Occupation: " +capitalizeFirstLetter(curNPC.occupation)+".<br> Goal: "+capitalizeFirstLetter(curNPC.goal)+" <br> Attitude: "+capitalizeFirstLetter(curNPC.attitude)+". <br> Stake: "+capitalizeFirstLetter(curNPC.stake)+".";
+		var npcOccupation = capitalizeFirstLetter(curNPC.occupation);
+		var npcGoal = capitalizeFirstLetter(curNPC.goal);
+		var npcAttitude = capitalizeFirstLetter(curNPC.attitude);
+		var npcStake = capitalizeFirstLetter(curNPC.stake);
+		var displayInfo = curNPC.name+ " is " +npcAge+ " " +curNPC.race+ " " +curNPC.sex+ ", with " +curNPC.eyes+ " eyes and " +curNPC.hair+ " hair. They have a "+curNPC.nose+" nose for their species."+facialHair+"<br> Occupation: " +npcOccupation+".<br> Goal: "+npcGoal+" <br> Attitude: "+npcAttitude+". <br> Stake: "+npcStake+".";
 		placeholder.innerHTML = displayInfo;
 	}
 	
