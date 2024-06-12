@@ -86,6 +86,7 @@
 		  <div class="tab-pane show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
 			<button class="random" id="random" content="random">Create Random NPC</button>
 			<button class="rerollOGAS" id="rerollOGAS" content="rerollOGAS">Reroll OGAS</button>
+			<button class="previous" id="previous" content="previous">Show Previous NPC</button>
 			<p id="placeholder"></p>
 		  </div>
 	  </div>
@@ -286,6 +287,7 @@
 	console.log(currentNPC)
 	
 	$(".random").click(function(){
+		if (currentNPC !== 'undefined') previousNPC = currentNPC;
 		race = document.getElementById('raceSelect').value;
 		age = document.getElementById('ageSelect').value;
 		sex = document.getElementById('sexSelect').value;
@@ -299,6 +301,11 @@
 		currentNPC.stake = setStake(race);
 		displayNPC(currentNPC);
 	});
-		
+	
+	$(".previous").click(function(){
+		currentNPC = previousNPC;
+		displayNPC(currentNPC);
+	});
+
   </script>
 </html>
