@@ -256,9 +256,9 @@
 	
 	function setStake(race) {
 		var r=Math.ceil(Math.random()*100);
-		if (r <= 1) return "<b>extreme</b>"; 
-		if (r <= 5) return "high"; 
-		if (r <= 25) return "low"; 
+		if (r <= 1) return "<b>extreme</b>";
+		if (r <= 5) return "high";
+		if (r <= 25) return "low";
 		if (r <= 100) return "average";
 	}
 	
@@ -292,6 +292,7 @@
 		setAttitude(currentNPC.race);
 		setStake(currentNPC.race);
 		displayNPC(currentNPC);
+		console.log("it worked");
 	});
 		
   </script>
