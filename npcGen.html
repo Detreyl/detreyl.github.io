@@ -264,10 +264,10 @@
 		//only display facial hair section if the NPC has facial hair
 		if (curNPC.faceHair != "none") { var facialHair = "<br> Facial hair: " +curNPC.faceHair+"."; }
 		else var facialHair = "";
-		if (curNPC.age != "old") { var age = "a " + curNPC.age;}
-		else var age = "an "+ curNPC.age;
+		if (curNPC.age != "old") { var npcAge = "a " + curNPC.age;}
+		else var npcAge = "an "+ curNPC.age;
 		var placeholder = document.getElementById('placeholder');
-		var displayInfo = curNPC.name+ " is a " +curNPC.age+ " " +curNPC.race+ " " +curNPC.sex+ ", with " +curNPC.eyes+ " eyes and " +curNPC.hair+ " hair. They have a "+curNPC.nose+" nose for their species."+facialHair+"<br> Occupation: " +curNPC.occupation+".<br> Goal: "+curNPC.goal+" <br> Attitude: "+curNPC.attitude+". <br> Stake: "+curNPC.stake+".";
+		var displayInfo = curNPC.name+ " is " +npcAge+ " " +curNPC.race+ " " +curNPC.sex+ ", with " +curNPC.eyes+ " eyes and " +curNPC.hair+ " hair. They have a "+curNPC.nose+" nose for their species."+facialHair+"<br> Occupation: " +curNPC.occupation+".<br> Goal: "+curNPC.goal+" <br> Attitude: "+curNPC.attitude+". <br> Stake: "+curNPC.stake+".";
 		placeholder.innerHTML = displayInfo;
 	}
 	
